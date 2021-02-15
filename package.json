@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-router",
+  "name": "df-ben-portfolio",
   "version": "1.0.0",
-  "description": "Basic skeleton codebase for React/Redux/Router applications.",
+  "description": "Personal portfolio app built in React.",
   "scripts": {
     "preinstall": "npm set audit false",
     "start": "webpack-dev-server --config webpack/dev.config.js --watch",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:bottega-code-school/js-builder.git"
+    "url": "https://github.com/Benjibuns/df-ben-portfolio.git"
   },
   "keywords": [
     "es6",
@@ -25,12 +25,12 @@
     "sass",
     "css module"
   ],
-  "author": "Your Name Here",
+  "author": "Benjamin Rivera",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bottega-code-school/js-builder/issues"
+    "url": "https://github.com/Benjibuns/df-ben-portfolio/issues"
   },
-  "homepage": "https://github.com/bottega-code-school/js-builder",
+  "homepage": "https://github.com/Benjibuns/df-ben-portfolio.git",
   "dependencies": {
     "ajv": "6.12.0",
     "autoprefixer": "^9.1.0",
