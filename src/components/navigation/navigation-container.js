@@ -15,7 +15,7 @@ export default class Navigation extends Component {
         <NavLink to="/contact" activeClassName="nav-link-active">Contact</NavLink>
         <NavLink to="/blog" activeClassName="nav-link-active">Blogs</NavLink>
 
-        {true ? <NavLink to="/add-blog">Add Blogs</NavLink>: ""}
+        {false ? <NavLink to="/add-blog">Add Blogs</NavLink>: ""}
       </div>
     )
   }
