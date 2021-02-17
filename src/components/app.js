@@ -12,6 +12,7 @@ import About from "./pages/about"
 import Contact from "./pages/contact"
 import Blog from "./pages/blogs"
 import PortfolioDetail from "./portfolio/portfolio-detail"
+import NoMatch from "./pages/no-match"
 
 export default class App extends Component {
   render() {
@@ -25,11 +26,12 @@ export default class App extends Component {
             <NavigationContainer/>
 
             <Switch>
-              <Route exact path="/"component={Home}></Route>
-              <Route path="/about-me"component={About}></Route>
-              <Route path="/contact"component={Contact}></Route>
-              <Route path="/blog"component={Blog}></Route>
-              <Route path="/portfolio/:slug"component={PortfolioDetail}></Route>
+              <Route exact path="/"component={Home}/>
+              <Route path="/about-me"component={About}/>
+              <Route path="/contact"component={Contact}/>
+              <Route path="/blog"component={Blog}/>
+              <Route exact path="/portfolio/:slug"component={PortfolioDetail}/>
+              <Route component={NoMatch}/>
             </Switch>
           </div>
         </Router>
