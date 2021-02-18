@@ -13,12 +13,16 @@
     transition: 0.3s ease-in-out;
 
     a {
-      color: black;
+      color: $grey;
       text-decoration: none;
+
+      &:hover {
+        color: black;
+      }
     }
 
     &:hover {
-      border-bottom: 1px solid black;;
+      border-bottom: 1px solid black;
     }
   }
 }
