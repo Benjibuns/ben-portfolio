@@ -8,14 +8,18 @@ export default class NavigationComponent extends Component {
 
   render() {
     return (
-      <div>
-        <NavLink exact to="/" activeClassName="nav-link-active">Home</NavLink>
+      <div className="nav-wrapper">
+        <div className="lieft-side">
+          <NavLink exact to="/" activeClassName="nav-link-active">Home</NavLink>
 
-        <NavLink to="/about-me" activeClassName="nav-link-active">About</NavLink>
-        <NavLink to="/contact" activeClassName="nav-link-active">Contact</NavLink>
-        <NavLink to="/blog" activeClassName="nav-link-active">Blogs</NavLink>
+          <NavLink to="/about-me" activeClassName="nav-link-active">About</NavLink>
+          <NavLink to="/contact" activeClassName="nav-link-active">Contact</NavLink>
+          <NavLink to="/blog" activeClassName="nav-link-active">Blogs</NavLink>
 
-        {false ? <NavLink to="/add-blog">Add Blogs</NavLink>: ""}
+          {false ? <NavLink to="/add-blog">Add Blogs</NavLink>: ""}
+        </div>
+
+        <div className="right-side">BENJAMIN RIVERA</div>
       </div>
     )
   }
