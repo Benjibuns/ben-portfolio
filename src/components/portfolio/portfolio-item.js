@@ -21,9 +21,13 @@ export default function (props) {
       />
 
 
-      {/* <img src={logo_url} alt=""/> */}
-      <div>{description}</div>
-      <Link to={`/portfolio/${id}`}>Link</Link>
+      <div className="img-text-wrapper">
+        <div className="logo-wrapper">
+          <img src={logo_url} alt=""/>
+        </div>
+
+        <div className="subtitle">{description}</div>
+      </div>
     </div>
   );
 }
