@@ -10,12 +10,7 @@ export default class PortfolioContainer extends Component {
     this.state = {
       pageTitle: "Welcome to my portfolio",
       isLoading: false,
-      data: [
-        { title: "Quip", category: "eCommerce", slug: "quip" },
-        { title: "Eventbright", category: "Scheduling", slug: "Eventbright"},
-        { title: "Ministry Safe", category: "Enterprise", slug: "Ministrysafe"},
-        { title: "SwingAway", category: "eCommerce", slug: "Swingaway"},
-      ],
+      data: [],
     };
 
     this.handleFilter = this.handleFilter.bind(this);
@@ -33,26 +28,30 @@ export default class PortfolioContainer extends Component {
   getPortfolioItems() {
     axios
     .get('https://benjibuns.devcamp.space/portfolio/portfolio_items')
-    .then(function (response) {
-      console.log("response data", response);
+    .then(response => {
+      this.setState({
+        data: response.data.portfolio_items
+      })
     })
-    .catch(function (error) {
+    .catch(error => {
       console.log(error);
     })
   }
 
   portfolioItems() {
     return this.state.data.map((item) => {
-      return <PortfolioItem title={item.title} url={"google.com"} slug={item.slug}/>;
+      return <PortfolioItem title={item.name} url={item.url} slug={item.id}/>;
     });
+  }
+
+  componentDidMount() {
+    this.getPortfolioItems()
   }
 
   render() {
     if (this.state.isLoading) {
       return <div>Loading...</div>;
     }
-
-    this.getPortfolioItems()
 
     return (
       <div>
