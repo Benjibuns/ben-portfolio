@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import axios from "axios";
 
 import NavigationContainer from "./navigation/navigation-container";
 import Home from "./pages/home";
@@ -9,7 +10,6 @@ import Blog from "./pages/blogs";
 import PortfolioDetail from "./portfolio/portfolio-detail";
 import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
-import axios from "axios";
 
 export default class App extends Component {
   constructor(props) {
