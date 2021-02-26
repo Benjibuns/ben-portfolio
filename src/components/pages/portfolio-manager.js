@@ -13,30 +13,26 @@ export default class PortfolioManager extends Component {
       portfolioToEdit: {},
     };
 
-    this.handleNewFormSubmission = this.handleNewFormSubmission.bind(
-      this
-    );
-    
-    this.handleEditFormSubmission = this.handleEditFormSubmission.bind(
-      this
-    );
-    
+    this.handleNewFormSubmission = this.handleNewFormSubmission.bind(this);
+
+    this.handleEditFormSubmission = this.handleEditFormSubmission.bind(this);
+
     this.handleFormSubmissionError = this.handleFormSubmissionError.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
-    this.handleEditClick = this.handleEditClick.bind(this)
-    this.clearPortfolioToEdit = this.clearPortfolioToEdit.bind(this)
+    this.handleEditClick = this.handleEditClick.bind(this);
+    this.clearPortfolioToEdit = this.clearPortfolioToEdit.bind(this);
   }
 
   clearPortfolioToEdit() {
     this.setState({
-      portfolioToEdit: {}
-    })
+      portfolioToEdit: {},
+    });
   }
 
   handleEditClick(portfolioItem) {
     this.setState({
-      portfolioToEdit: portfolioItem
-    })
+      portfolioToEdit: portfolioItem,
+    });
   }
 
   handleDeleteClick(portfolioItem) {
@@ -46,12 +42,12 @@ export default class PortfolioManager extends Component {
         { withCredentials: true }
       )
       .then((response) => {
-        this.setState ({
-          portfolioItems: this.state.portfolioItems.filter(item => {
-            return item.id !== portfolioItem.id
-          })
-        })
-        
+        this.setState({
+          portfolioItems: this.state.portfolioItems.filter((item) => {
+            return item.id !== portfolioItem.id;
+          }),
+        });
+
         return response.data;
       })
       .catch((error) => {
@@ -60,7 +56,7 @@ export default class PortfolioManager extends Component {
   }
 
   handleEditFormSubmission() {
-    this.getPortfolioItems()
+    this.getPortfolioItems();
   }
 
   handleNewFormSubmission(portfolioItem) {
@@ -72,8 +68,8 @@ export default class PortfolioManager extends Component {
 
   handleFormSubmissionError(error) {
     this.setState({
-      portfolioItem: [portfolioItem]
-    })
+      portfolioItem: [portfolioItem],
+    });
   }
 
   getPortfolioItems() {

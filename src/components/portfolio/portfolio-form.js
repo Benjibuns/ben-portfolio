@@ -62,6 +62,9 @@ export default class PortfolioForm extends Component {
         editMode: true,
         apiUrl: `https://benjibuns.devcamp.space/portfolio/portfolio_items/${id}`,
         apiAction: "patch",
+        thumb_image: thumb_image_url || "",
+        banner_image: banner_image_url || "",
+        logo: logo_url || "",
       });
     }
   }
@@ -138,7 +141,7 @@ export default class PortfolioForm extends Component {
     })
       .then((response) => {
         if (this.state.editMode) {
-          this.props.handleEditFormSubmission()
+          this.props.handleEditFormSubmission();
         } else {
           this.props.handleNewFormSubmission(response.data.portfolio_item);
         }
@@ -221,14 +224,18 @@ export default class PortfolioForm extends Component {
         </div>
 
         <div className="image-uploaders">
-          <DropzoneComponent
-            ref={this.thumbRef}
-            config={this.componentConfig()}
-            djsConfig={this.djsConfig()}
-            eventHandlers={this.handleThumbDrop()}
-          >
-            <div className="dz-message">Thubmnail</div>
-          </DropzoneComponent>
+          {this.state.thumb_image && this.state.editMode ? (
+            <img src={this.state.thumb_image} alt="" />
+          ) : (
+            <DropzoneComponent
+              ref={this.thumbRef}
+              config={this.componentConfig()}
+              djsConfig={this.djsConfig()}
+              eventHandlers={this.handleThumbDrop()}
+            >
+              <div className="dz-message">Thubmnail</div>
+            </DropzoneComponent>
+          )}
 
           <DropzoneComponent
             ref={this.bannerRef}
