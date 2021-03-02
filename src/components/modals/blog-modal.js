@@ -29,7 +29,7 @@ class BlogModal extends Component {
   }
 
   handleSuccessfulFormSubmission(blog) {
-    console.log("blog from blog form", blog);
+    this.props.handleSuccessfulNewBlogSubmisssion(blog);
   }
 
   render() {
