@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-import PortfolioSidebarList from "../portfolio/portolio-sidebar-list";
+import PortfolioSidebarList from "../portfolio/portfolio-sidebar-list";
 import PortfolioForm from "../portfolio/portfolio-form";
 
 export default class PortfolioManager extends Component {
@@ -14,9 +14,7 @@ export default class PortfolioManager extends Component {
     };
 
     this.handleNewFormSubmission = this.handleNewFormSubmission.bind(this);
-
     this.handleEditFormSubmission = this.handleEditFormSubmission.bind(this);
-
     this.handleFormSubmissionError = this.handleFormSubmissionError.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
     this.handleEditClick = this.handleEditClick.bind(this);
