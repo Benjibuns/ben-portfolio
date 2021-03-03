@@ -38,7 +38,7 @@ export default class BlogDetail extends Component {
       });
   }
 
-  componentDidMount() {
+  UNSAFE_componentWillMount() {
     this.getBlogItem();
   }
 
