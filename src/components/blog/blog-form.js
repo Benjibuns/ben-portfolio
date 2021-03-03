@@ -132,7 +132,7 @@ class BlogForm extends Component {
           />
         </div>
 
-        <div className="image_uploaders">
+        <div className="image-uploaders">
           <DropzoneComponenet
             ref={this.featuredImageRef}
             config={this.componentConfig()}
