@@ -1,0 +1,25 @@
+.about-me-introduction {
+  margin-bottom: 45px;
+}
+
+.personality-test-link {
+  cursor: pointer;
+  color: $teal;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  font-weight: 900;
+
+  &:hover {
+    color: $dark-teal;
+  }
+}
+
+.about-me-strengths {
+  .about-me-header {
+    border-bottom: 1px solid $teal;
+  }
+
+  li {
+    margin-bottom: 15px;
+  }
+}
