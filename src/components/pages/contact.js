@@ -8,7 +8,7 @@ export default function () {
       <div
         className="left-column"
         style={{
-          background: "url(" + contactPagePicture + ") no-repeat",
+          background: `url(${contactPagePicture}) no-repeat`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

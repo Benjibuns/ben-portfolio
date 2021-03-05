@@ -1,5 +1,5 @@
 import React from "react";
-import profilPicture from "../../../static/assets/images/bio/coughing_cat.jpg";
+import profilePicture from "../../../static/assets/images/bio/coughing_cat.jpg";
 
 export default function () {
   return (
@@ -7,7 +7,7 @@ export default function () {
       <div
         className="left-column"
         style={{
-          background: "url(" + profilPicture + ") no-repeat",
+          background: `url(${profilePicture}) no-repeat`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
